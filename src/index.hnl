@@ -24,9 +24,9 @@
 --- returns { status: Int, headers: {...}, body: String, body_bytes: Bytes }
 --- and raises on transport failure (CURLE_*).
 
-from "../generated/curl-c-linux-x86_64/curl" import * as curlm
-from "../generated/libc-c-linux-x86_64/stdio" import * as stdiom
-from "../generated/libc-c-linux-x86_64/unistd" import * as unistdm
+from "curl/curl" import * as curlm
+from "libc/stdio" import * as stdiom
+from "libc/unistd" import * as unistdm
 from "str" import * as strm
 from "bytes" import * as bytesm
 

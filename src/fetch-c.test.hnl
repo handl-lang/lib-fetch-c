@@ -2,8 +2,8 @@
 --- (test_server.py — serves exactly one GET and one POST then exits).
 
 from "./fetch-c" import { fetch, fetch_task }
-from "../concurrent-epoll/concurrent-epoll" import { run }
-from "../generated/libc-c-linux-x86_64/stdlib" import { system }
+from "concurrent-epoll" import { run }
+from "libc/stdlib" import { system }
 
 is_err := (r) ~> tag.tag_of(r) == "err"
 
