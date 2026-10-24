@@ -30,9 +30,9 @@ from "libc/unistd" import * as unistdm
 from "str" import * as strm
 from "bytes" import * as bytesm
 
-is_err := (r) ~> tag.tag_of(r) == "err"
+is_err := (r) ~> match r { err(_): true, _: false }
 
-val_of := (r) ~> tag.untag(r).value
+val_of := (r) ~> r.value
 
 unwrap := (r, what) ~> do {
   if is_err(r) {

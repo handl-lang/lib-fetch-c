@@ -5,9 +5,15 @@ from "./fetch-c" import { fetch, fetch_task }
 from "concurrent-epoll" import { run }
 from "libc/stdlib" import { system }
 
-is_err := (r) ~> tag.tag_of(r) == "err"
 
-val_of := (r) ~> tag.untag(r).value
+-- res_tag -- the `tag.tag_of` replacement for `ok`/`err` results
+-- (phase-3 WS-F nominal migration): dispatch is ctor-sym identity via
+-- `match` -- the `err`/`ok` arms cover both the canonical `__ctor__`
+-- mint and the host-minted `{"__tag__": ...}` envelope.
+res_tag :: r ~> match r { ok(_): "ok", err(_): "err", _: "?" }
+is_err := (r) ~> res_tag(r) == "err"
+
+val_of := (r) ~> r.value
 
 --- poll for the server's readiness sentinel via system("test -f"). The
 --- budget is generous (30s) because the gate runs several test files at
