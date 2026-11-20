@@ -2,14 +2,13 @@
 
 `fetch` backed by libcurl (sdkgen bindings) — sync plus `fetch_task` step-arrow for `concurrent-epoll`.
 
-Part of the `handl-lang` org split (ADR-0128). History is a `git subtree
-split` of the platform monorepo's `fetch-c/` (via `c`).
-
 ## Layout
 
 ```text
-src/        the .hnl sources
-pkg.hnl     dependencies, when any: `{ deps: { <name>: "branch:<ref>" } }`
+src/                     the .hnl sources
+pkg.hnl                  package manifest
+scripts/hnl-gate.sh      the gate
+ci.sh                    bupha entry
 ```
 
 ## Gate

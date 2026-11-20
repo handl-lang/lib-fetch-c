@@ -1,3 +1,11 @@
 -- lib-fetch-c: modules this package provides (entry defaults to
 -- src/index.hnl; N modules resolve to src/<name>/index.hnl).
-{ deps: { fetch: "branch:main", curl: "branch:main", libc: "branch:main" }, modules: ["fetch-c"] }
+{
+  deps: { fetch: "branch:main", curl: "branch:main", libc: "branch:main" },
+  modules: ["fetch-c"],
+  name: "fetch-c",
+  description: "fetch backend over libcurl — sync plus fetch_task step-arrow.",
+  license: "MIT",
+  keywords: ["fetch", "curl", "http", "backend"],
+  homepage: "https://github.com/handl-lang/lib-fetch-c",
+}
