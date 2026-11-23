@@ -1,6 +1,6 @@
 # lib-fetch-c
 
-`fetch` backed by libcurl (sdkgen bindings) — sync plus `fetch_task` step-arrow for `concurrent-epoll`.
+`fetch` backed by libcurl (codegen bindings) — sync plus `fetch_task` step-arrow for `concurrent-epoll`.
 
 ## Layout
 

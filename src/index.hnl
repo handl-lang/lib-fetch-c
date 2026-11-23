@@ -1,4 +1,4 @@
---- fetch-c -- `fetch` backed by libcurl (sdkgen bindings).
+--- fetch-c -- `fetch` backed by libcurl (codegen bindings).
 ---
 --- Capture design: libcurl's default writer streams the response body
 --- into a tmpfile() via CURLOPT_WRITEDATA and the header block into a
