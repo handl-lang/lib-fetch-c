@@ -8,7 +8,7 @@
 src/                     the .hnl sources
 pkg.hnl                  package manifest
 scripts/hnl-gate.sh      the gate
-ci.sh                    bupha entry
+workflows/gate.yaml                    bupha entry (handl-gates)
 ```
 
 ## Gate
