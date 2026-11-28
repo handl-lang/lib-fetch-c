@@ -1,7 +1,7 @@
 -- lib-fetch-c: modules this package provides (entry defaults to
 -- src/index.hnl; N modules resolve to src/<name>/index.hnl).
 {
-  deps: { fetch: "branch:main", curl: "branch:main", libc: "branch:main" },
+  deps: { fetch: "branch:main", curl: "branch:main", libc: "branch:main", "concurrent-epoll": "branch:main", concurrent: "branch:main", "tls-libssl": "branch:main", "ws-c": "branch:main", ws: "branch:main" },
   modules: ["fetch-c"],
   name: "fetch-c",
   description: "fetch backend over libcurl — sync plus fetch_task step-arrow.",
